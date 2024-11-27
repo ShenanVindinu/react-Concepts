@@ -7,9 +7,9 @@ function App() {
 
   return (
     <div>
-        <Item {...itemList[0]}/>
-        <Item {...itemList[1]}/>
-        <Item {...itemList[2]}/>
+        <Item title={itemList[0].title} desc={itemList[0].desc} />
+        <Item title={itemList[1].title} desc={itemList[1].desc} />
+        <Item title={itemList[2].title} desc={itemList[2].desc} />
     </div>
   )
 }
@@ -17,7 +17,7 @@ function App() {
 const itemList = [
     {
         title: 'RAD',
-        desc: 'Lorem ipsum dolor sit amet'
+        desc: 'Lorem ipsum dolor'
     },
     {
         title: 'RAD',
@@ -25,7 +25,7 @@ const itemList = [
     },
     {
         title: 'RAD',
-        desc: 'Lorem ipsum dolor sit amet'
+        desc: 'Lorem dolor sit amet'
     }
 ]
 
