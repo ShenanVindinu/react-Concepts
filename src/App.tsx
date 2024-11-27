@@ -1,16 +1,23 @@
 import './App.css'
-import Subject from "./component/Subject.tsx";
+import ButtonComponent from "./component/ButtonComponent.tsx";
 
 
 function App() {
 
+    function handleClick(type: string) {
+        console.log('click');
+        alert(type + ' clicked');
+    }
+
+
     return (
 
         <>
-            <Subject name= 'RAD'>Lorem ipsum</Subject>
-            <Subject name= 'MAD'>Lorem ipsum</Subject>
-            <Subject name= 'RAD'>Lorem ipsum</Subject>
+            <ButtonComponent name='Dashboard' onClick={handleClick}/>
+            <ButtonComponent name='Add Customer' onClick={handleClick}/>
+            <ButtonComponent name='DeleteCustomer' onClick={handleClick}/>
         </>
+
     )
 }
 
