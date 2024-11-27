@@ -1,14 +1,16 @@
 import './App.css'
-import Button, {FancyButton, SmallButton,} from './Button'
+import Item from "./component/item.tsx";
 
 function App() {
 
+
+
   return (
-    <>
-      <Button/>
-      <FancyButton/>
-      <SmallButton/>
-    </>
+    <div>
+        <Item title={'RAD'} desc={'Lorem ipsum dolor sit amet'}/>
+        <Item title={'RAD'} desc={'Lorem ipsum dolor sit amet'}/>
+        <Item title={'RAD'} desc={'Lorem ipsum dolor sit amet'}/>
+    </div>
   )
 }
 
