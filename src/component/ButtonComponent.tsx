@@ -1,10 +1,17 @@
-export default function ButtonComponent(props) {
+// ButtonComponent.tsx
+import React from 'react';
 
-    const name = props.name;
+type ButtonComponentProps = {
+    count: number;
+    onClick: () => void;
+};
 
-    return(
-        <>
-            <button onClick={() => props.onClick(name)}>{props.name}</button>
-        </>
-    )
-}
+const ButtonComponent: React.FC<ButtonComponentProps> = ({ count, onClick }) => {
+    return (
+        <button onClick={onClick}>
+            Click me! Count: {count}
+        </button>
+    );
+};
+
+export default ButtonComponent;

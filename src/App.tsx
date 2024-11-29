@@ -1,24 +1,22 @@
 import './App.css'
-import ButtonComponent from "./component/ButtonComponent.tsx";
+// import ButtonComponent from "./component/ButtonComponent.tsx";
+// import {useState} from "react";
+import Item from "./component/Item.tsx";
 
 
 function App() {
+    // const [count, setCount] = useState(0);
 
-    function handleClick(type: string) {
-        console.log('click');
-        alert(type + ' clicked');
-    }
-
+    // function handleClick() {
+    //     setCount(count + 1);
+    // }
 
     return (
-
         <>
-            <ButtonComponent name='Dashboard' onClick={handleClick}/>
-            <ButtonComponent name='Add Customer' onClick={handleClick}/>
-            <ButtonComponent name='DeleteCustomer' onClick={handleClick}/>
+            <Item title={'RAD'} desc={'Lorem ipsum dolor sit amet'} />
+            <Item title={'MAD'} desc={'Lorem ipsum dolor sit amet'} />
         </>
-
-    )
+    );
 }
 
-export default App
+export default App;
