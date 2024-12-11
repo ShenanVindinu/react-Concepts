@@ -48,10 +48,10 @@ function App() {
             <br/>
             <br/>
 
-            <button onClick={addCustomer}>Add</button>
-            <button onClick={deleteCustomer}>Delete</button>
-            <button onClick={deleteByEmail}>Delete By Email</button>
-            <button onClick={updateCustomer}>Update By Email</button>
+            <button className={"button"} onClick={addCustomer}>Add</button>
+            <button className={"button"} onClick={deleteCustomer}>Delete</button>
+            <button className={"button"} onClick={deleteByEmail}>Delete By Email</button>
+            <button className={"button"} onClick={updateCustomer}>Update By Email</button>
 
             <br/>
             <br/>
