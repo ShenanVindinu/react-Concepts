@@ -4,16 +4,23 @@ import Dashboard from "./pages/Dashboard.tsx";
 import UpdateCustomer from "./pages/UpdateCustomer.tsx";
 import DeleteCustomer from "./pages/DeleteCustomer.tsx";
 import AddCustomer from "./pages/AddCustomer.tsx";
+import {RootLayout} from "./component/RootLayout.tsx";
 
 
 
 function App() {
 
     const routes = createBrowserRouter([
-        {path:'', element: <Dashboard/>},
-        {path:'/add', element: <AddCustomer/>},
-        {path:'/update', element: <UpdateCustomer/>},
-        {path:'/delete', element: <DeleteCustomer/>}
+        {
+            path: '',
+            element: <RootLayout/>,
+            children: [
+                {path:'', element: <Dashboard/>},
+                {path:'/add', element: <AddCustomer/>},
+                {path:'/delete', element: <DeleteCustomer/>},
+                {path:'/update', element: <UpdateCustomer/>}
+            ]
+        },
     ])
 
     return (
