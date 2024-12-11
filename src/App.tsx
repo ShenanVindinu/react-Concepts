@@ -24,6 +24,13 @@ function App() {
         setCustomers((customers) => customers.slice(0,-1));
     }
 
+    const deleteByEmail = () => {
+        const newCustomer = new Customer(name, email, phone, address);
+        setCustomers((customers) => customers.filter(
+            (customer) => customer.email !== newCustomer.email)
+        );
+    }
+
     return (
         <>
             <input name={"name"} type={"text"} onChange={(e) => setName(e.target.value)} />
@@ -34,8 +41,9 @@ function App() {
             <br/>
             <br/>
 
-            <button onClick={addCustomer}>Add Customer</button>
+            <button onClick={addCustomer}>Add</button>
             <button onClick={deleteCustomer}>Delete</button>
+            <button onClick={deleteByEmail}>Delete By Email</button>
 
             <br/>
             <br/>
