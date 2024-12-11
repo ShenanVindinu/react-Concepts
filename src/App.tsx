@@ -31,6 +31,13 @@ function App() {
         );
     }
 
+    const updateCustomer = () => {
+        const newCustomer = customers.map((customer) => customer.email == email
+        ? {...customer, name:name, phone:phone, address:address, email:email} : customer);
+
+        setCustomers(newCustomer)
+    }
+
     return (
         <>
             <input name={"name"} type={"text"} onChange={(e) => setName(e.target.value)} />
@@ -44,6 +51,7 @@ function App() {
             <button onClick={addCustomer}>Add</button>
             <button onClick={deleteCustomer}>Delete</button>
             <button onClick={deleteByEmail}>Delete By Email</button>
+            <button onClick={updateCustomer}>Update By Email</button>
 
             <br/>
             <br/>
