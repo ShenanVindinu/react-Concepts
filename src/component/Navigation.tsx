@@ -5,10 +5,10 @@ export default function Navigation() {
         <header>
             <nav>
                 <ul>
-                    <Link to={'/'}>DashBoard </Link>
-                    <Link to={'/add'}>Add Customer </Link>
-                    <Link to={'/update'}>Update Customer </Link>
-                    <Link to={'/delete'}>Delete Customer </Link>
+                    <Link to={'/'}>DashBoard | </Link>
+                    <Link to={'/add'}>Add Customer | </Link>
+                    <Link to={'/update'}>Update Customer | </Link>
+                    <Link to={'/delete'}>Delete Customer | </Link>
                 </ul>
             </nav>
         </header>
