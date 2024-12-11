@@ -1,20 +1,28 @@
 import './App.css'
-// import ButtonComponent from "./component/ButtonComponent.tsx";
-// import {useState} from "react";
-import Item from "./component/Item.tsx";
+import {useState} from "react";
+
 
 
 function App() {
-    // const [count, setCount] = useState(0);
 
-    // function handleClick() {
-    //     setCount(count + 1);
-    // }
+    const [customer, setCustomer] = useState({
+        firstName: "",
+        lastName: "",
+    })
+
+    function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
+        setCustomer({
+            ...customer,
+            [e.target.name]: e.target.value
+        })
+    }
 
     return (
         <>
-            <Item title={'RAD'} desc={'Lorem ipsum dolor sit amet'} />
-            <Item title={'MAD'} desc={'Lorem ipsum dolor sit amet'} />
+           <input name={'firstName'} type="text" placeholder="First Name" onChange={handleInputChange} />
+           <input name={'lastName'} type="text" placeholder="Last Name" onChange={handleInputChange} />
+            <br/>
+            {customer.firstName + " " + customer.lastName}
         </>
     );
 }
